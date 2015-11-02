@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:id="@+id/btn_add_book"
+            android:src="@drawable/ic_library_add_white_24dp"
+            android:scaleType="fitCenter"/>
+        <ImageButton
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:id="@+id/btn_remove_books"
+            android:src="@drawable/ic_delete_white_24dp"
+            android:scaleType="fitCenter"/>
+        <ImageButton
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:id="@+id/btn_edit_book"
+            android:src="@drawable/ic_mode_edit_white_24dp"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:orientation="vertical"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+        >
+        <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/books_listview"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:id="@+id/book_lib_prog"
+            android:layout_gravity="center"
+            android:visibility="invisible"/>
+    </FrameLayout>
+</LinearLayout>
